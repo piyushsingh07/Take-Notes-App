@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.sidebar {
+    width: 20vw;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+    z-index: 10;
+}
+
+.sidebar-header h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.group-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 80px;
+}
+
+.group-item {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.group-item:hover {
+    background-color: lightgray;
+}
+
+.group-item.selected {
+    background-color: lightgray;
+}
+
+.group-item:hover:not(.selected) {
+    background-color: #F1F1F1;
+}
+
+.initials {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.group-name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #16008B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+}

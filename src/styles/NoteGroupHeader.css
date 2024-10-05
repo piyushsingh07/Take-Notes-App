@@ -1,0 +1,27 @@
+.note-group-header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.note-group-header .initials {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.note-group-header .group-name {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,81 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.group-name-input {
+    margin-bottom: 20px;
+}
+
+.group-name-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.group-name-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.color-picker {
+    margin-bottom: 20px;
+}
+
+.color-picker span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-options button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.color-options button.selected {
+    border: 2px solid black;
+}
+
+.create-button {
+    background-color: #001F8B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create-button:hover {
+    background-color: #001A7A;
+}

@@ -1,0 +1,45 @@
+.main-content-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-content-intro img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.main-content-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.main-content-intro p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #292929;
+}
+
+.encrypted {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #292929;
+    font-weight: 400;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.encrypted img {
+    padding-top: 13px;
+    max-width: 12px;
+    margin-right: 3px;
+}
