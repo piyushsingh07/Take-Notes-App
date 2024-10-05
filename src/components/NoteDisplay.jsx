@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
 import '../styles/NoteDisplay.css';
+import { useEffect, useRef } from 'react';
 
 const NoteDisplay = ({ notes, selectedGroup }) => {
     const filteredNotes = notes.filter(note => note.groupId === selectedGroup.id);
+    const noteDisplayRef = useRef(null);
+
+    useEffect(() => {
+        if (noteDisplayRef.current) {
+            noteDisplayRef.current.scrollTop = noteDisplayRef.current.scrollHeight;
+        }
+    }, [filteredNotes]);
+
     return (
-        <div className="note-display">
+        <div className="note-display" ref={noteDisplayRef}>
             {filteredNotes.length > 0 ? (
                 filteredNotes.map((note, index) => (
                     <div key={index} className="note">
@@ -29,7 +38,7 @@ NoteDisplay.propTypes = {
     ).isRequired,
     selectedGroup: PropTypes.shape({
         id: PropTypes.number.isRequired,
-    }).isRequired, // Add selectedGroup to prop types
+    }).isRequired,
 };
 
 export default NoteDisplay;
