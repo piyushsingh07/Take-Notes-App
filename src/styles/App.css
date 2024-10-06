@@ -26,7 +26,7 @@ html, body {
     width: 100%;
     background-color: #476f50;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 .note-input-container {
@@ -34,4 +34,26 @@ html, body {
     background-color: #476f50;
     padding: 20px;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-content {
+        display: none; 
+    }
+
+    .main-content.active {
+        display: flex; 
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .sidebar.active {
+        display: none; 
+    }
 }

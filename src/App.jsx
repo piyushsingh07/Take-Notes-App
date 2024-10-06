@@ -63,6 +63,10 @@ function App() {
         setSelectedGroup(group);
     };
 
+    const handleBack = () => {
+        setSelectedGroup(null);
+    };
+
     const handleAddNote = (noteText) => {
         const now = new Date();
         const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -81,11 +85,13 @@ function App() {
 
     return (
         <div className="app">
-            <Sidebar groups={groups} selectedGroup={selectedGroup} onAddGroup={handleAddGroup} onSelectGroup={handleSelectGroup} />
-            <div className="main-content">
+            <div className={`sidebar ${selectedGroup ? 'active' : ''}`}>
+                <Sidebar groups={groups} selectedGroup={selectedGroup} onAddGroup={handleAddGroup} onSelectGroup={handleSelectGroup} />
+            </div>
+            <div className={`main-content ${selectedGroup ? 'active' : ''}`}>
                 {selectedGroup ? (
                     <>
-                        <NoteGroupHeader group={selectedGroup} />
+                        <NoteGroupHeader group={selectedGroup} onBack={handleBack} />
                         <NoteDisplay notes={notes} selectedGroup={selectedGroup} />
                         <NoteInput onAddNote={handleAddNote} />
                     </>

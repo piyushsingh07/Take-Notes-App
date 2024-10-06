@@ -6,20 +6,16 @@ import PropTypes from 'prop-types';
 const Sidebar = ({ groups, selectedGroup, onAddGroup, onSelectGroup }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Define handleAddButtonClick to open the modal
     const handleAddButtonClick = () => {
         setIsModalOpen(true);
     };
 
-    // Sort groups by lastUpdated timestamp
     const sortedGroups = [...groups].sort((a, b) => {
         const dateA = a.lastUpdated ? new Date(a.lastUpdated) : new Date(0);
         const dateB = b.lastUpdated ? new Date(b.lastUpdated) : new Date(0);
         return dateB - dateA;
     });
-    
-    console.log('Sorted Groups:', sortedGroups);
-    
+        
     return (
         <div className="sidebar">
             <div className="sidebar-header">

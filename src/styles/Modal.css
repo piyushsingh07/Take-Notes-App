@@ -79,3 +79,9 @@
 .create-button:hover {
     background-color: #001A7A;
 }
+
+@media (max-width: 768px) {
+    .modal {
+        margin: 20px;
+    }
+}

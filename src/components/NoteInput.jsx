@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/NoteInput.css';
-import saveIcon from '../assets/Vector1.png'; // Default save icon
-import activeSaveIcon from '../assets/Vector2.png'; // Active save icon when input is not empty
+import saveIcon from '../assets/Vector1.png'; 
+import activeSaveIcon from '../assets/Vector2.png'; 
 
 const NoteInput = ({ onAddNote }) => {
     const [note, setNote] = useState('');
@@ -14,7 +14,7 @@ const NoteInput = ({ onAddNote }) => {
     const handleAddNote = () => {
         if (note.trim()) {
             onAddNote(note);
-            setNote(''); // Clear input after adding
+            setNote(''); 
         }
     };
 
