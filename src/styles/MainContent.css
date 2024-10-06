@@ -2,44 +2,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    height: 100%;
+    height: 100vh;
+    padding: 20vh 2vw 0 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .main-content-intro img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    max-height: 40vh;
+    object-fit: contain;
+    margin-bottom: 2vh;
 }
 
 .main-content-title {
-    font-size: 50px;
+    font-size: clamp(24px, 4vw, 40px);
     font-weight: 700;
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
 }
 
 .main-content-intro p {
     font-weight: 500;
-    margin-bottom: 10px;
+    margin: 0 0 1vh 0;
     color: #292929;
+    font-size: clamp(12px, 1.5vw, 16px);
 }
 
 .encrypted {
     display: flex;
-    align-items: flex-start;
-    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 1.2vw, 14px);
     color: #292929;
     font-weight: 400;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    justify-content: center;
+    margin-top: auto;
 }
 
 .encrypted img {
-    padding-top: 13px;
-    max-width: 12px;
-    margin-right: 3px;
+    width: clamp(8px, 1.2vw, 12px);
+    margin-right: 0.3vw;
+    margin-top: 0.8vh;
 }
