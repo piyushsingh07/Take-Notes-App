@@ -75,7 +75,6 @@ function App() {
         const newNote = { text: noteText, date: `${formattedDate} • ${formattedTime}`, groupId: selectedGroup.id };
         setNotes(prevNotes => [...prevNotes, newNote]);
     
-        // Update the lastUpdated timestamp for the group
         setGroups(prevGroups => prevGroups.map(group => 
             group.id === selectedGroup.id 
                 ? { ...group, lastUpdated: new Date().toISOString() } 
